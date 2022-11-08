@@ -1,2 +1,2 @@
 # phone-cataloge
-This is a technical test from GuideSmiths
+This is a junior technical test from GuideSmiths
