@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import GalleryStyled from '../ui/GalleryStyled';
 
 /* import { gettingPhones } from '../service/api'; */
 
@@ -19,13 +20,15 @@ const Gallery = () => {
 
   return (
     <>
-      {phoneGallery.length &&
-        phoneGallery.map((phone) => (
-          <div key={phone.id}>
-            <h2>{phone.name}</h2>
-            <img src={phone.image} alt={phone.name} />
-          </div>
-        ))}
+      <GalleryStyled>
+        {phoneGallery.length &&
+          phoneGallery.map((phone) => (
+            <div key={phone.id}>
+              <h2>{phone.name}</h2>
+              <img src={phone.image} alt={phone.name} />
+            </div>
+          ))}
+      </GalleryStyled>
     </>
   );
 };
