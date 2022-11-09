@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+
 import GalleryStyled from '../ui/GalleryStyled';
 
 /* import { gettingPhones } from '../service/api'; */
@@ -17,7 +18,7 @@ const Gallery = () => {
     getPhones();
     console.log(getPhones());
   }, []);
-
+  console.log(phoneGallery[0]);
   return (
     <>
       <GalleryStyled>
