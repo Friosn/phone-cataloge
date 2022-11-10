@@ -26,9 +26,11 @@ const Carousel = (props) => {
   return (
     <div className="carousel-container">
       <div className="carousel-wrapper">
-        <button onClick={prev} className="left-arrow">
-          ⬅️
-        </button>
+        {currentIndex > 0 && (
+          <button onClick={prev} className="left-arrow">
+            ⬅️
+          </button>
+        )}
         <div className="carousel-content-wrapper">
           <div
             className="carousel-content"
@@ -39,9 +41,11 @@ const Carousel = (props) => {
             {children}
           </div>
         </div>
-        <button onClick={next} className="right-arrow">
-          ➡️
-        </button>
+        {currentIndex < length - 1 && (
+          <button onClick={next} className="right-arrow">
+            ➡️
+          </button>
+        )}
       </div>
     </div>
   );
