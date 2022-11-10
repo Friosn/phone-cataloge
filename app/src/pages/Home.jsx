@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
+import Carousel from '../components/Carousel';
 const Home = () => {
   const [phones, setPhones] = useState([]);
 
@@ -16,8 +17,25 @@ const Home = () => {
 
   console.log(phones[0]);
   return (
-    <div className="containerCarousel">
-      {/* <div className="miniContainer">
+    <>
+      <Carousel>
+        {phones.length &&
+          phones.map((phone) => (
+            <div key={phone.id}>
+              <h2>{phone.name}</h2>
+              <img src={phone.image} alt={phone.name} />
+            </div>
+          ))}
+      </Carousel>
+    </>
+  );
+};
+
+export default Home;
+
+{
+  /*<div className="containerCarousel">
+       <div className="miniContainer">
         <div className="card">
           <h2>{phones[0].name}</h2>
           <img src={phones[0].image} alt={phones[0].name} />
@@ -37,9 +55,6 @@ const Home = () => {
       <div className="miniContainer">
         <img src="#" alt="Image 1" class="img" />
         <img src="#" alt="Image 1" class="img" />
-      </div> */}
-    </div>
-  );
-};
-
-export default Home;
+      </div> 
+    </div>*/
+}

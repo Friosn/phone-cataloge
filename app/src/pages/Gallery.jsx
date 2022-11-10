@@ -12,7 +12,6 @@ const Gallery = () => {
     const getPhones = async () => {
       const rawData = await fetch('http://localhost:3000/phones');
       const dataToJson = await rawData.json();
-      console.log(dataToJson);
       setPhoneGallery(dataToJson);
     };
     getPhones();
