@@ -4,22 +4,44 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 const Carousel = (props) => {
+  const { children } = props;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(children.length);
-  const { children } = props;
 
   useEffect(() => {
     setLength(children.length);
-  }, []);
+  }, [children]);
+
+  const next = () => {
+    if (currentIndex < length - 1) {
+      setCurrentIndex((prevState) => prevState + 1);
+    }
+  };
+  const prev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevState) => prevState - 1);
+    }
+  };
 
   return (
     <div className="carousel-container">
       <div className="carousel-wrapper">
-        <button className="left-arrow">⬅️</button>
+        <button onClick={prev} className="left-arrow">
+          ⬅️
+        </button>
         <div className="carousel-content-wrapper">
-          <div className="carousel-content">{children}</div>
+          <div
+            className="carousel-content"
+            style={{
+              transform: `translateX(-${currentIndex * 100}%)`,
+            }}
+          >
+            {children}
+          </div>
         </div>
-        <button className="right-arrow">➡️</button>
+        <button onClick={next} className="right-arrow">
+          ➡️
+        </button>
       </div>
     </div>
   );
