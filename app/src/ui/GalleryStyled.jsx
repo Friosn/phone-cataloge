@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const GalleryStyled = styled.main`
-  margin: 10px;
+  margin: 5rem 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
