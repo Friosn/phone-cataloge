@@ -4,6 +4,7 @@ import CardStyled from '../ui/CardStyled';
 
 import GalleryStyled from '../ui/GalleryStyled';
 import H2Styled from '../ui/H2Styled';
+import PriceStyled from '../ui/PriceStyled';
 
 /* import { gettingPhones } from '../service/api'; */
 
@@ -27,6 +28,10 @@ const Gallery = () => {
           phoneGallery.map((phone) => (
             <CardStyled key={phone.id}>
               <H2Styled>{phone.name}</H2Styled>
+              <PriceStyled>
+                <del className="oldPrice">{phone.price + 100}€</del>
+                🡲 {phone.price}€
+              </PriceStyled>
               <img src={phone.image} alt={phone.name} />
             </CardStyled>
           ))}
