@@ -31,7 +31,11 @@ const Carousel = (props) => {
         <div className="carousel-wrapper">
           {currentIndex > 0 && (
             <button onClick={prev} className="left-arrow">
-              ⬅️
+              <img
+                src="https://res.cloudinary.com/dfrmvbvdc/image/upload/v1668276818/Icon-set/Arrows/left_a1eaau.png"
+                alt="scroll-left"
+                height="30"
+              />
             </button>
           )}
           <div className="carousel-content-wrapper">
@@ -46,7 +50,11 @@ const Carousel = (props) => {
           </div>
           {currentIndex < length - 1 && (
             <button onClick={next} className="right-arrow">
-              ➡️
+              <img
+                src="https://res.cloudinary.com/dfrmvbvdc/image/upload/v1668277226/Icon-set/Arrows/right-chevron_ldy4nz.png"
+                alt="scroll-right"
+                height="30"
+              />
             </button>
           )}
         </div>
