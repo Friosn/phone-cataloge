@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Carousel from '../components/Carousel';
 const Home = () => {
@@ -27,6 +28,9 @@ const Home = () => {
             </div>
           ))}
       </Carousel>
+      <Link to="phones">
+        <button className="galleryBtn">FLASH OFFERS!!</button>
+      </Link>
     </>
   );
 };
