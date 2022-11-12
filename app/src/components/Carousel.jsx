@@ -3,6 +3,8 @@ import './carousel.css';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+
+import GalleryStyled from '../ui/GalleryStyled';
 const Carousel = (props) => {
   const { children } = props;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,30 +26,32 @@ const Carousel = (props) => {
   };
 
   return (
-    <div className="carousel-container">
-      <div className="carousel-wrapper">
-        {currentIndex > 0 && (
-          <button onClick={prev} className="left-arrow">
-            ⬅️
-          </button>
-        )}
-        <div className="carousel-content-wrapper">
-          <div
-            className="carousel-content"
-            style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
-            }}
-          >
-            {children}
+    <GalleryStyled>
+      <div className="carousel-container">
+        <div className="carousel-wrapper">
+          {currentIndex > 0 && (
+            <button onClick={prev} className="left-arrow">
+              ⬅️
+            </button>
+          )}
+          <div className="carousel-content-wrapper">
+            <div
+              className="carousel-content"
+              style={{
+                transform: `translateX(-${currentIndex * 100}%)`,
+              }}
+            >
+              {children}
+            </div>
           </div>
+          {currentIndex < length - 1 && (
+            <button onClick={next} className="right-arrow">
+              ➡️
+            </button>
+          )}
         </div>
-        {currentIndex < length - 1 && (
-          <button onClick={next} className="right-arrow">
-            ➡️
-          </button>
-        )}
       </div>
-    </div>
+    </GalleryStyled>
   );
 };
 
