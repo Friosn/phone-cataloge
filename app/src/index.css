@@ -13,7 +13,9 @@
 
 }
 
-
+*{
+  color: #2a2538;
+}
 span {
   color: var(--contrast);
 }
