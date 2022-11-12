@@ -1,4 +1,5 @@
 import React from 'react';
+
 import FooterStyled from '../ui/FooterStyled';
 
 const Footer = () => {

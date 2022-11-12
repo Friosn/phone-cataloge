@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import CardStyled from '../ui/CardStyled';
 
+import CardStyled from '../ui/CardStyled';
 import GalleryStyled from '../ui/GalleryStyled';
 import H2Styled from '../ui/H2Styled';
 import PriceStyled from '../ui/PriceStyled';
