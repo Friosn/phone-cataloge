@@ -10,7 +10,7 @@ margin-bottom: 2rem;
 }
 .carousel-wrapper {
 display: flex;
-width: 100%;
+width: 130%;
 position:relative;
 
 
@@ -18,12 +18,12 @@ position:relative;
 }
 .carousel-container-wrapper{
 overflow: hidden;
-width: 100%;
+width: 60%;
 height: 100%;
 }
 .carousel-content{
 display: flex;
-transition: all 250ms linear;
+transition: all 280ms linear;
 -ms-overflow-style: none;
 scrollbar-width: none;
 
@@ -33,7 +33,7 @@ scrollbar-width: none;
     display: none;
 }
 .carousel-content > * {
-    width: 100%;
+    width: 101.1%;
     flex-shrink: 0;
     flex-grow: 1;
     justify-content: center;
@@ -44,6 +44,7 @@ scrollbar-width: none;
 
 .left-arrow, .right-arrow {
     position: absolute;
+    justify-content: space-between;
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);

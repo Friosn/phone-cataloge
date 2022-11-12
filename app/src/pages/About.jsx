@@ -1,7 +1,12 @@
 import React from 'react';
 
+import GalleryStyled from '../ui/GalleryStyled';
 const About = () => {
-  return <div>About</div>;
+  return (
+    <GalleryStyled className="about">
+      <div>About</div>
+    </GalleryStyled>
+  );
 };
 
 export default About;
