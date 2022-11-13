@@ -1,19 +1,13 @@
 import React from 'react';
+import './Popup.css';
 
-const PopUp = (props) => {
-  const { phone } = props;
+export const Popup = ({ text, closePopup }) => {
   return (
-    <div className="popup_wrapper">
-      <div className="popup_content">
-        <button className="popup_close">
-          <strong> X </strong>
-        </button>
-        <div className="popup_detail">
-          <h2>{name}</h2>
-        </div>
+    <div className="popup-container">
+      <div className="popup-body">
+        <h1>{text}</h1>
+        <button onClick={closePopup}>Close X</button>
       </div>
     </div>
   );
 };
-
-export default PopUp;
