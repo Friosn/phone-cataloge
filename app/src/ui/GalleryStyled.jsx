@@ -5,8 +5,9 @@ const GalleryStyled = styled.main`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
+  align-items: flex-start;
 `;
 
 export default GalleryStyled;

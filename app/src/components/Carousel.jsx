@@ -28,36 +28,40 @@ const Carousel = (props) => {
   return (
     <GalleryStyled>
       <div className="carousel-container">
-        {currentIndex > 0 && (
-          <button onClick={prev} className="left-arrow">
-            <img
-              src="https://res.cloudinary.com/dfrmvbvdc/image/upload/v1668276818/Icon-set/Arrows/left_a1eaau.png"
-              alt="scroll-left"
-              height="30"
-            />
-          </button>
-        )}
+        <div className="btn_left">
+          {currentIndex > 0 && (
+            <button onClick={prev} className="left-arrow">
+              <img
+                src="https://res.cloudinary.com/dfrmvbvdc/image/upload/v1668276818/Icon-set/Arrows/left_a1eaau.png"
+                alt="scroll-left"
+                height="30"
+              />
+            </button>
+          )}
+        </div>
         <div className="carousel-wrapper">
           <div className="carousel-content-wrapper">
             <div
               className="carousel-content"
               style={{
-                transform: `translateX(-${currentIndex * 20}%)`,
+                transform: `translateX(-${currentIndex * 30}%)`,
               }}
             >
               {children}
             </div>
           </div>
         </div>
-        {currentIndex < length - 1 && (
-          <button onClick={next} className="right-arrow">
-            <img
-              src="https://res.cloudinary.com/dfrmvbvdc/image/upload/v1668277226/Icon-set/Arrows/right-chevron_ldy4nz.png"
-              alt="scroll-right"
-              height="30"
-            />
-          </button>
-        )}
+        <div className="btn_right">
+          {currentIndex < length - 1 && (
+            <button onClick={next} className="right-arrow">
+              <img
+                src="https://res.cloudinary.com/dfrmvbvdc/image/upload/v1668277226/Icon-set/Arrows/right-chevron_ldy4nz.png"
+                alt="scroll-right"
+                height="30"
+              />
+            </button>
+          )}
+        </div>
       </div>
     </GalleryStyled>
   );

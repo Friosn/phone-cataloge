@@ -31,7 +31,9 @@ const Gallery = () => {
                 <del className="oldPrice">{phone.price + 100}€</del>
                 🡲 {phone.price}€
               </PriceStyled>
-              <img src={phone.image} alt={phone.name} />
+              <div className="containImg">
+                <img src={phone.image} alt={phone.name} />
+              </div>
               <DetailButtonStiled>View details</DetailButtonStiled>
             </CardStyled>
           ))}

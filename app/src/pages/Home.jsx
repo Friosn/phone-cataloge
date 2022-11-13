@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Carousel from '../components/Carousel';
+/* import StalkBuild from '../ui/StalkyBtn'; */
 const Home = () => {
   const [phones, setPhones] = useState([]);
 
@@ -28,9 +29,7 @@ const Home = () => {
             </div>
           ))}
       </Carousel>
-      <Link to="phones">
-        <button className="galleryBtn">FLASH OFFERS!!</button>
-      </Link>
+      <Link to="phones"></Link>
     </>
   );
 };
