@@ -36,29 +36,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{
-  /*<div className="containerCarousel">
-       <div className="miniContainer">
-        <div className="card">
-          <h2>{phones[0].name}</h2>
-          <img src={phones[0].image} alt={phones[0].name} />
-        </div>
-        <div className="card">
-          <img src="#" alt="Image 1" class="img" />
-        </div>
-      </div>
-      <div className="miniContainer">
-        <img src="#" alt="Image 1" class="img" />
-        <img src="#" alt="Image 1" class="img" />
-      </div>
-      <div className="miniContainer">
-        <img src="#" alt="Image 1" class="img" />
-        <img src="#" alt="Image 1" class="img" />
-      </div>
-      <div className="miniContainer">
-        <img src="#" alt="Image 1" class="img" />
-        <img src="#" alt="Image 1" class="img" />
-      </div> 
-    </div>*/
-}
