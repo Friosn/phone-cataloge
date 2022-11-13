@@ -11,6 +11,11 @@ const DetailButtonStiled = styled.button`
   display: flex;
   margin: 5% auto;
   cursor: pointer;
+  opacity: 0.5;
+  transition: all 500ms ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export default DetailButtonStiled;

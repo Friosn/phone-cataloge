@@ -1,14 +1,17 @@
 .carousel-container{
-width: 60rem;
+max-width: 62rem;
+height:30rem ;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-margin-top: 7rem;
-margin-bottom: 2rem;
+margin: 8rem 2rem 4rem 2rem;
 overflow: hidden;
-
+/* background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+z-index: 3; */
 }
+
 .carousel-wrapper {
 display: flex;
 
@@ -43,7 +46,7 @@ scrollbar-width: none;
     
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
 }
 .carousel-content > div {
@@ -52,31 +55,32 @@ scrollbar-width: none;
 
 .btn_right, .btn_left{
  
-    height: 30%;
-    width: 5rem;
+    height: 39%;
+    width: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
 }
 
 .btn_left {
     display: flex;
     position: fixed;
-    left: 5%;
+    left: 4%;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+  
     z-index: 3;
 
 }
 .btn_right {
     display: flex;
     position: fixed;
-   right: 5%;
+   right: 4%;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+   
     z-index: 3;
 }
 
@@ -114,6 +118,14 @@ scrollbar-width: none;
     width: 18.75rem;
     justify-content: center;
     align-items: center;
+    object-fit: contain;
+    
 }
 
+.carousel_element >img {
+    transition: all 700ms ease-in-out;
+}
+.carousel_element >img:hover {
+   transform: scale(1.1);
+}
 

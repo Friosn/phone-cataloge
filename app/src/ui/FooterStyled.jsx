@@ -21,12 +21,11 @@ const FooterStyled = styled.footer`
     margin: 0 1rem;
     width: 1.6rem;
     height: 1.6rem;
-    border-radius: 20%;
+    border-radius: 40%;
+    transition: all 500ms ease-in-out;
 
     &:hover {
-      background-color: #f2723a;
-      transition: 1s ease-in-out;
-      transition-timing-function: 1s;
+      background-color: #29e2be;
     }
   }
 `;

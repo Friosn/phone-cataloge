@@ -31,7 +31,7 @@ li {
   min-height: 83.3vh;
 } */
 main {
-  height: 100%;
+  min-height: 80.5vh;
 }
 .containImg{
   height: 20rem;
@@ -41,6 +41,11 @@ main {
   justify-content: center;
   object-fit: contain;
   margin: 10px;
+  transition: all 700ms ease-out;
+}
+.containImg:hover{
+  transform: scale(1.1) ;
+  
 }
 
 .about {
