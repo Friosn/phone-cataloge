@@ -1,12 +1,11 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 
 import CardStyled from '../ui/CardStyled';
+import DetailButtonStiled from '../ui/DetailButtonStyled';
 import GalleryStyled from '../ui/GalleryStyled';
 import H2Styled from '../ui/H2Styled';
 import PriceStyled from '../ui/PriceStyled';
-
-/* import { gettingPhones } from '../service/api'; */
 
 const Gallery = () => {
   const [phoneGallery, setPhoneGallery] = useState([]);
@@ -33,6 +32,7 @@ const Gallery = () => {
                 🡲 {phone.price}€
               </PriceStyled>
               <img src={phone.image} alt={phone.name} />
+              <DetailButtonStiled>View details</DetailButtonStiled>
             </CardStyled>
           ))}
       </GalleryStyled>
