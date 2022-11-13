@@ -108,6 +108,12 @@ scrollbar-width: none;
     
 }
 
-
+.carousel_element{
+    display: flex;
+    height:20rem;
+    width: 18.75rem;
+    justify-content: center;
+    align-items: center;
+}
 
 

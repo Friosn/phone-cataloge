@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 
 import GalleryStyled from '../ui/GalleryStyled';
 const Carousel = (props) => {
+  console.log(props);
   const { children } = props;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(children.length);
@@ -13,7 +14,7 @@ const Carousel = (props) => {
   useEffect(() => {
     setLength(children.length);
   }, [children]);
-
+  console.log(props);
   const next = () => {
     if (currentIndex < length - 1) {
       setCurrentIndex((prevState) => prevState + 1);

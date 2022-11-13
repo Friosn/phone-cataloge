@@ -16,14 +16,12 @@ const Home = () => {
     };
     getPhones();
   }, []);
-
-  console.log(phones[0]);
   return (
     <>
       <Carousel>
         {phones.length &&
           phones.map((phone) => (
-            <div key={phone.id}>
+            <div key={phone.id} className="carousel_element">
               <h2>{phone.name}</h2>
               <img src={phone.image} alt={phone.name} />
             </div>

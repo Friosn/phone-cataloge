@@ -33,6 +33,15 @@ li {
 main {
   height: 100%;
 }
+.containImg{
+  height: 20rem;
+  width: 18.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+  margin: 10px;
+}
 
 .about {
   height: 70vh;
